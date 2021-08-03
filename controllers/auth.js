@@ -1,6 +1,6 @@
-1const axios = require('axios')
+const axios = require('axios')
 const mysql = require('mysql')
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcrypt-pbkdf')
 const jwt = require('jsonwebtoken')
 const pool = require('../sql/connection')
 const { handleSQLError } = require('../sql/error')
