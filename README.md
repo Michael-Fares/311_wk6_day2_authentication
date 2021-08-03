@@ -140,10 +140,7 @@ testPassword1
 Remember this information because we are about to use it again. This time go to Postman and submit a request to the `/auth/login` route that's already been created for us in this application. The full request will be a POST to `http://localhost:4001/auth/login` with the body:
 
 ```json
-{
-    "username": "test@example.com",
-    "password": "Password!"
-}
+
 ```
 
 If everything worked correctly you should have received an "access_token" in return. That's the token that we can use to send to your endpoints after a user logs in. Keep in mind that the "users" are now stored in Auth0 and are different from the users we have in our database. Those database users are just dummy data at this point. We won't need to actually store information about our users because Auth0 will do it for us.
