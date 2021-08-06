@@ -1,7 +1,13 @@
 const jwksRsa = require('jwks-rsa');
 const jwt = require('express-jwt');
 
-const logger = () => {}
+const logger = (req, res, next) => {
+console.log('Logging route:', 
+req.path, 
+new Date().toISOString())
+// reminder to self: remember to call next otherwise the API will get hung up on the middleware!!!
+next()
+}
 
 const checkJwt = jwt({
   secret: jwksRsa.expressJwtSecret({
